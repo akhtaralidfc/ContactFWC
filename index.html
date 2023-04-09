@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="shortcut icon" href="./contact.png" type="image/x-icon">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>CONTACT US!</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://formspree.io/f/xbjepdkg" method="POST">
+            <h3>REACH OUT TO US!</h3>
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="Name" placeholder="Your Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" placeholder="Email id" required>
+            <label for="num">Phone No:</label>
+            <input type="number" id="num" name="Phone Number" pattern="[1-9]{1}[0-9]{9}" placeholder="+91" required>
+            <label for="msg">How can we help you?</label>
+            <textarea id="tarea" name="Message" rows="3" cols="50" placeholder="Type your message here..."></textarea>
+            <div class="g-recaptcha" data-sitekey="6LdtY1YlAAAAALxXapPRR_hatbJV6zX-P4_b3ZEd" data-callback="enableBtn"></div>
+            <div class="btn">
+                <input type="button" value="Send" id="button1" class="inputbtn" disabled="true" onclick="this.form.submit();">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
